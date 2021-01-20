@@ -107,7 +107,7 @@ volumes, and a total capacity  of 16Ti. This configuration requires
       --volumes 16                            \
       --capacity 16Ti                         \
       --namespace minio-tenant-1              \
-      --storageClassName local-storage        \
+      --storage-class local-storage        \
 ```
 
 - The `minio-tenant-1` argument specifies the name of the MinIO Tenant. The MinIO
@@ -136,7 +136,7 @@ volumes, and a total capacity  of 16Ti. This configuration requires
 
   MinIO supports *one* MinIO Tenant per namespace.
 
-- The `--storageClassName` field indicates which 
+- The `--storage-class` field indicates which 
   [`StorageClass`](https://kubernetes.io/docs/concepts/storage/storage-classes/) to use 
   when generating each `PVC`.
 
@@ -257,7 +257,7 @@ provisioner: kubernetes.io/no-provisioner
 volumeBindingMode: WaitForFirstConsumer
 ```
 
-To specify the storage class, include the `--storageClassName` option to 
+To specify the storage class, include the `--storage-class` option to 
 `kubectl minio tenant create`.
 
 
